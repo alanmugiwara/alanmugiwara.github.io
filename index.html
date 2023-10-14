@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Minha Página</title>
+    <meta charset="UTF-8">
+    <title>Landing Page - Vencendo a Ansiedade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            font-size: 36px;
+        }
+        p {
+            color: #555;
+            font-size: 20px;
+        }
+        .product-image {
+            max-width: 100%;
+            border: 5px solid #0077cc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #0077cc;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #005599;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="titulo"></h1>
-    <p id="descricao"></p>
-
-    <script>
-        fetch('https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/termosdeuso.json')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                // Define os elementos onde você deseja exibir os dados
-                var tituloElement = document.getElementById('titulo');
-                var descricaoElement = document.getElementById('descricao');
-
-                // Exibe os dados do JSON nos elementos HTML
-                tituloElement.textContent = data.content[0].elements[0].elements[0].settings.editor;
-                descricaoElement.textContent = data.content[0].elements[1].elements[0].settings.editor;
-            })
-            .catch(function(error) {
-                console.error('Erro ao carregar o JSON: ' + error);
-            });
-    </script>
+    <div class="container">
+        <h1>Descubra o segredo para viver livre da ansiedade!</h1>
+        <p>O Livro digital <strong>Vencendo a Ansiedade</strong> foi criado pelo Psicólogo Thiago Filgueiras, especialista em Tratamento de Transtornos de Ansiedade e Síndrome do Pânico. O livro oferece um guia prático de como lidar com a ansiedade no seu dia a dia e te ajudar a ter qualidade de vida.</p>
+        <img class="product-image" src="https://previews.dropbox.com/p/thumb/ACDNuP1PtJa5LruNJ2rcs4M5TA1LIbDMT-RvrE-djP1fPbEnB49JFBiTsUwdQM_F7Z75KDpwHQUZgfQORSHVLvAk_6yqO5jI3Uanaxh4fG6U7wkXISlYxM5fLEtKAbnlu46PgC1uBcsbHR4WKYLrljYtM2hWj52c3PTJYxaeJpIgIwSjslhUhR6yBES8FlUCCw8k2eQY_BKa4T0jdQvIISsFgAJ7IQNrt6Bh5LQsZfV_TLvqKkoimiO_Q_9db2E9CY900RRluo8wyjtQo-rlD407rquxBs6ETbLXLUFycehUsGGwLp15fVx7PbtvPaiqHpS75aMNcBL1Yacvdd5iYG5V/p.png" alt="Ebook Vencendo a Ansiedade">
+        <p>Não deixe que a ansiedade atrapalhe a sua vida, adquira já o seu livro digital!</p>
+        <a class="button" href="https://pay.kiwify.com.br/UvUgyMQ">Comprar Agora</a>
+    </div>
 </body>
 </html>
