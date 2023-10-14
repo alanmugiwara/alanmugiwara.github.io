@@ -1,1 +1,0 @@
-# alanmugiwara.github.io
