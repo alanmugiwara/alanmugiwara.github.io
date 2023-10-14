@@ -5,20 +5,5 @@
 </head>
 <body>
     <div id="conteudo"></div>
-
-    <script>
-        fetch('https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/politicadeprivacidade.json')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                // Aqui você pode manipular os dados do JSON e exibi-los na página.
-                // Por exemplo, você pode adicionar o conteúdo a um elemento HTML.
-                document.getElementById('conteudo').innerHTML = data.conteudo;
-            })
-            .catch(function(error) {
-                console.error('Erro ao carregar o JSON: ' + error);
-            });
-    </script>
 </body>
 </html>
