@@ -4,17 +4,22 @@
     <title>Minha Página</title>
 </head>
 <body>
-    <div id="conteudo"></div>
+    <h1 id="titulo"></h1>
+    <p id="descricao"></p>
 
     <script>
-        fetch('https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/politicadeprivacidade.json')
+        fetch('https://alanmugiwara.github.io/politicadeprivacidade.json')
             .then(function(response) {
                 return response.json();
             })
             .then(function(data) {
-                // Aqui você pode manipular os dados do JSON e exibi-los na página.
-                // Por exemplo, você pode adicionar o conteúdo a um elemento HTML.
-                document.getElementById('conteudo').innerHTML = data.conteudo;
+                // Define os elementos onde você deseja exibir os dados
+                var tituloElement = document.getElementById('titulo');
+                var descricaoElement = document.getElementById('descricao');
+
+                // Exibe os dados do JSON nos elementos HTML
+                tituloElement.textContent = data.content[0].elements[0].elements[0].settings.editor;
+                descricaoElement.textContent = data.content[0].elements[1].elements[0].settings.editor;
             })
             .catch(function(error) {
                 console.error('Erro ao carregar o JSON: ' + error);
