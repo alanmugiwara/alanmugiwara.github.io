@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saudações</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="nome">Qual o seu nome, moça?</label>
+        <input type="text" id="nome" required>
+        <br>
+        <label for="namorado">Você tem namorado, moça?</label>
+        <input type="text" id="namorado" required>
+        <br>
+        <label for="nomeNamorado">Então qual o nome dele?</label>
+        <input type="text" id="nomeNamorado" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="respostas" style="display: none;">
+        <p>Então você se chama <span id="nomeMoça"></span></p>
+        <p><span id="nomeMoça"></span>, sou o Roboto 🤖, prazer em conhecê-la ✨</p>
+        <p>O <span id="nomeNamoradoSpan"></span> me criou pra dizer que adora escrever códigos usando você, e que te ama</p>
+    </div>
+
+    <script>
+        const form = document.getElementById("myForm");
+        const respostasDiv = document.getElementById("respostas");
+        const nomeMoçaSpan = document.getElementById("nomeMoça");
+        const nomeNamoradoSpan = document.getElementById("nomeNamoradoSpan");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const nome = document.getElementById("nome").value;
+            const namorado = document.getElementById("namorado").value;
+            const nomeNamorado = document.getElementById("nomeNamorado").value;
+
+            nomeMoçaSpan.textContent = nome;
+            nomeNamoradoSpan.textContent = nomeNamorado;
+
+            form.style.display = "none";
+            respostasDiv.style.display = "block";
+        });
+    </script>
+</body>
+</html>
