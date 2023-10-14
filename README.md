@@ -1,1 +1,1 @@
-# Site AlanMugiwara GitHub Pages
+# AlanMugiwara GitHub Pages
