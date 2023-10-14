@@ -55,25 +55,11 @@
         <h1>Descubra o segredo para<br> viver livre da ansiedade!</h1>
         <p>O Livro digital <strong>Vencendo a Ansiedade</strong> foi criado pelo Psicólogo Thiago Filgueiras, especialista em Tratamento de Transtornos de Ansiedade e Síndrome do Pânico. O livro oferece um guia prático de como lidar com a ansiedade no seu dia a dia e te ajudar a ter qualidade de vida.</p>
         <img class="product-image" src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/EBOOK-CAPA-VENCENDO-A-ANSIEDADE.png" alt="Ebook Vencendo a Ansiedade">
-        <div id="myPlayer"></div>
-        <script src="https://content.jwplatform.com/libraries/PLAYER_LIBRARY.js"></script>
-        <script>
-            var playerInstance = jwplayer("myPlayer");
-            playerInstance.setup({
-                file: "https://content.jwplatform.com/videos/W9PFNqIO-OeSMsuFE.mp4",
-                autostart: true,
-            });
-        </script>
+        <video width="480" autoplay controls>
+            <source src="https://content.jwplatform.com/videos/W9PFNqIO-OeSMsuFE.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeo.
+        </video>
         <a class="button" id="buyButton" href="https://pay.kiwify.com.br/UvUgyMQ">Comprar Agora</a>
     </div>
-
-    <script>
-        var video = document.querySelector("video");
-        video.onended = function() {
-            var buyButton = document.getElementById("buyButton");
-            buyButton.style.display = "block";
-        };
-    </script>
-    <a href="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/Juju-python-car.html">Link para o arquivo Juju-python-car.html</a>
 </body>
 </html>
