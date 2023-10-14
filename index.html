@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Erro 404 - Página não encontrada</title>
+    <title>Minha Página</title>
 </head>
 <body>
-    <h1>Erro 404</h1>
-    <p>Desculpe, a página que você está procurando não foi encontrada.</p>
-    <img src="https://drive.google.com/uc?id=1_vB7YP03dTGjqVy5le7VsR3n_izgVtUB" alt="Erro 404 - Página não encontrada">
+    <div id="conteudo"></div>
+
+    <script>
+        fetch('https://alanmugiwara.github.io/politicadeprivacidade.json')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                // Aqui você pode manipular os dados do JSON e exibi-los na página.
+                // Por exemplo, você pode adicionar o conteúdo a um elemento HTML.
+                document.getElementById('conteudo').innerHTML = data.conteudo;
+            })
+            .catch(function(error) {
+                console.error('Erro ao carregar o JSON: ' + error);
+            });
+    </script>
 </body>
 </html>
