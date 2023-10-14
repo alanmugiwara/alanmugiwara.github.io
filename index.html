@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Visualização do JSON</title>
+    <title>Minha Página</title>
 </head>
 <body>
-  <h1>Conteúdo do JSON</h1>
-  <pre id="json-content"></pre>
+    <div id="conteudo"></div>
 
-  <script>
-    fetch('https://raw.githubusercontent.com/alanmugiwara/github.io/main/politicadeprivacidade.json') // Substitua 'seu-arquivo.json' pelo nome do seu arquivo JSON
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('json-content').textContent = JSON.stringify(data, null, 2);
-      })
-      .catch(error => {
-        console.error('Erro ao carregar o JSON: ' + error);
-      });
-  </script>
+    <script>
+        fetch('https://alanmugiwara.github.io/politicadeprivacidade.json')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                // Aqui você pode manipular os dados do JSON e exibi-los na página.
+                // Por exemplo, você pode adicionar o conteúdo a um elemento HTML.
+                document.getElementById('conteudo').innerHTML = data.conteudo;
+            })
+            .catch(function(error) {
+                console.error('Erro ao carregar o JSON: ' + error);
+            });
+    </script>
 </body>
 </html>
