@@ -61,5 +61,13 @@
         </video>
         <a class="button" id="buyButton" href="https://pay.kiwify.com.br/UvUgyMQ">Comprar Agora</a>
     </div>
+
+    <script>
+        var video = document.querySelector("video");
+        video.onended = function() {
+            var buyButton = document.getElementById("buyButton");
+            buyButton.style.display = "block";
+        };
+    </script>
 </body>
 </html>
