@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora de Precificação v1.2 | By @alanmugiwaras</title>
+    <title>Calculadora de Precificação | By @alanmugiwaras</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,9 +61,10 @@
             const cpa = custoProduto + custoMarketing;
             const custoTotal = cpa + (porcentagemGateway * cpa) + (porcentagemLojaVirtual * cpa) + (porcentagemCheckout * cpa);
             const lucro = valorVenda - custoTotal;
+            const lucroPorcentagem = (lucro / custoTotal) * 100;
 
             document.getElementById("resultado_cpa").textContent = "CPA: R$" + cpa.toFixed(2);
-            document.getElementById("resultado_lucro").textContent = "Lucro: R$" + lucro.toFixed(2);
+            document.getElementById("resultado_lucro").textContent = "Lucro: R$" + lucro.toFixed(2) + " (" + lucroPorcentagem.toFixed(2) + "%)";
         }
     </script>
 </body>
