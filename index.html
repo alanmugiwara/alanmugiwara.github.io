@@ -1,73 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>E-book: Vencendo a Ansiedade</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333; /* Cor de fundo escura para o cabeçalho */
+            color: #fff; /* Cor do texto branca */
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        nav {
+            background-color: #444; /* Cor de fundo um pouco mais clara para o menu */
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #111;
-            border: 1px solid #444;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
         }
-        h1 {
-            color: #fff;
-            font-size: 36px;
-        }
-        p {
-            color: #fff;
-            font-size: 20px;
-            text-align: justify;
-        }
-        .product-image {
-            max-width: 100%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .button {
-            display: none;
-            width: 200px;
-            margin: 0 auto;
-            padding: 10px 30px;
-            background-color: #ff0000;
-            color: #fff;
-            font-size: 24px;
+        nav a {
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #ff3333;
+            color: #fff; /* Cor dos links do menu */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Descubra o segredo para<br> viver livre da ansiedade!</h1>
-        <p>O Livro digital <strong>Vencendo a Ansiedade</strong> foi criado pelo Psicólogo Thiago Filgueiras, especialista em Tratamento de Transtornos de Ansiedade e Síndrome do Pânico. O livro oferece um guia prático de como lidar com a ansiedade no seu dia a dia e te ajudar a ter qualidade de vida.</p>
-        <img class="product-image" src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/EBOOK-CAPA-VENCENDO-A-ANSIEDADE.png" alt="Ebook Vencendo a Ansiedade">
-        <video width="480" autoplay controls>
-            <source src="https://content.jwplatform.com/videos/W9PFNqIO-OeSMsuFE.mp4" type="video/mp4">
-            Seu navegador não suporta a reprodução de vídeo.
-        </video>
-        <a class="button" id="buyButton" href="https://pay.kiwify.com.br/UvUgyMQ">Comprar Agora</a>
+    <header>
+        <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/logo.png" alt="Logo do Site">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="pages/mercadometro.html">Mercadômetro</a></li>
+            <li><a href="pages/calculadora-de-precificacao.html">Página 2</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Bem-vindo à Página Inicial</h2>
+        <p>Este é o conteúdo da página inicial do meu site.</p>
     </div>
-
-    <script>
-        var video = document.querySelector("video");
-        video.onended = function() {
-            var buyButton = document.getElementById("buyButton");
-            buyButton.style.display = "block";
-        };
-    </script>
 </body>
 </html>
