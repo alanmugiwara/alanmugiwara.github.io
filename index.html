@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Calculadora de Precificação</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -8,8 +9,8 @@
             padding: 0;
         }
         header {
-            background-color: #333; /* Cor de fundo escura para o cabeçalho */
-            color: #fff; /* Cor do texto branca */
+            background-color: #333;
+            color: #fff;
             text-align: center;
             padding: 20px;
         }
@@ -18,7 +19,7 @@
             height: auto;
         }
         nav {
-            background-color: #444; /* Cor de fundo um pouco mais clara para o menu */
+            background-color: #444;
             padding: 10px;
         }
         nav ul {
@@ -32,7 +33,18 @@
         }
         nav a {
             text-decoration: none;
-            color: #fff; /* Cor dos links do menu */
+            color: #fff;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label,
+        .form-group input {
+            display: block;
         }
     </style>
 </head>
@@ -50,9 +62,53 @@
             <li><a href="pages/calculadora-de-precificacao.html">Calculadora de precificação v1.2</a></li>
         </ul>
     </nav>
-    <div class="content">
-        <h2>Bem-vindo(a) à Página Inicial</h2>
-        <p>Aqui irei compartilhar alguns experimentos do meu aprendizado em desenvolvimento.</p>
+    <div class="container">
+        <h1>Calculadora de Precificação</h1>
+        <div class="form-group">
+            <label for="custo_produto">Custo do Produto no Fornecedor (BRL)</label>
+            <input type="text" id="custo_produto">
+        </div>
+        <div class="form-group">
+            <label for="custo_marketing">Custo de Marketing (BRL)</label>
+            <input type="text" id="custo_marketing">
+        </div>
+        <div class="form-group">
+            <label for="porcentagem_gateway">Porcentagem do Gateway de Pagamento (%)</label>
+            <input type="text" id="porcentagem_gateway">
+        </div>
+        <div class="form-group">
+            <label for="porcentagem_loja_virtual">Porcentagem de Taxa da Loja Virtual (%)</label>
+            <input type="text" id="porcentagem_loja_virtual">
+        </div>
+        <div class="form-group">
+            <label for="porcentagem_checkout">Porcentagem Checkout Transparente (%)</label>
+            <input type="text" id="porcentagem_checkout">
+        </div>
+        <div class="form-group">
+            <label for="valor_venda">Valor de Venda (BRL)</label>
+            <input type="text" id="valor_venda">
+        </div>
+        <button onclick="calcularCPAELucro()">Calcular CPA e Lucro</button>
+        <p id="resultado_cpa"></p>
+        <p id="resultado_lucro"></p>
     </div>
+    <script>
+        function calcularCPAELucro() {
+            const custoProduto = parseFloat(document.getElementById("custo_produto").value.replace(',', '.'));
+            const custoMarketing = parseFloat(document.getElementById("custo_marketing").value.replace(',', '.'));
+            const porcentagemGateway = parseFloat(document.getElementById("porcentagem_gateway").value.replace(',', '.')) / 100;
+            const porcentagemLojaVirtual = parseFloat(document.getElementById("porcentagem_loja_virtual").value.replace(',', '.')) / 100;
+            const porcentagemCheckout = parseFloat(document.getElementById("porcentagem_checkout").value.replace(',', '.')) / 100;
+            const valorVenda = parseFloat(document.getElementById("valor_venda").value.replace(',', '.');
+
+            const cpa = custoProduto + custoMarketing;
+            const custoTotal = cpa + (porcentagemGateway * cpa) + (porcentagemLojaVirtual * cpa) + (porcentagemCheckout * cpa);
+            const lucro = valorVenda - custoTotal;
+            const lucroPorcentagem = (lucro / custoTotal) * 100;
+
+            document.getElementById("resultado_cpa").textContent = "CPA: R$" + cpa.toFixed(2);
+            document.getElementById("resultado_lucro").textContent = "Lucro: R$" + lucro.toFixed(2) + " (" + lucroPorcentagem.toFixed(2) + "%)";
+        }
+    </script>
 </body>
 </html>
