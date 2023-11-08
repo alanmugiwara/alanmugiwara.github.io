@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora de Precificação v1.2</title>
+    <title>Calculadora de Precificação v1.2 | By @alanmugiwaras</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header video {
+            max-width: 100%;
+            height: auto;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
         }
         .container {
             max-width: 400px;
@@ -13,12 +42,26 @@
         .form-group {
             margin-bottom: 10px;
         }
-        .form-group label, .form-group input {
+        .form-group label,
+        .form-group input {
             display: block;
         }
     </style>
 </head>
 <body>
+    <header>
+        <video autoplay loop muted>
+            <source src="https://github.com/alanmugiwara/alanmugiwara.github.io/raw/main/video/logo.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Página Inicial</a></li>
+            <li><a href="/mercadometro.html">Mercadômetro v1.0</a></li>
+            <li><a href="/calculadora-de-precificacao.html">Calculadora de precificação v1.2</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h1>Calculadora de Precificação</h1>
         <div class="form-group">
@@ -56,7 +99,7 @@
             const porcentagemGateway = parseFloat(document.getElementById("porcentagem_gateway").value.replace(',', '.')) / 100;
             const porcentagemLojaVirtual = parseFloat(document.getElementById("porcentagem_loja_virtual").value.replace(',', '.')) / 100;
             const porcentagemCheckout = parseFloat(document.getElementById("porcentagem_checkout").value.replace(',', '.')) / 100;
-            const valorVenda = parseFloat(document.getElementById("valor_venda").value.replace(',', '.'));
+            const valorVenda = parseFloat(document.getElementById("valor_venda").value.replace(',', '.');
 
             const cpa = custoProduto + custoMarketing;
             const custoTotal = cpa + (porcentagemGateway * cpa) + (porcentagemLojaVirtual * cpa) + (porcentagemCheckout * cpa);
