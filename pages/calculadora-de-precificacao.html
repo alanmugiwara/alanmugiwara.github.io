@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora de Precificação v1.2</title>
-    <meta property="og:title" content="Calculadora de Precificação v1.2">
-    <meta property="og:description" content="Uma calculadora de precificação simples para o seu negócio. Calcule o CPA e o lucro com facilidade.">
-    <meta property="og:image" content="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true"> <!-- Substitua pelo URL da sua imagem de thumbnail -->
-    <meta property="og:url" content="https://seu-site.com/pages/calculadora-de-precificacao.html"> <!-- Substitua pelo URL real da sua página -->
+    <title>Mercadômetro</title>
+    <meta property="og:title" content="Calculadora de Precificação v1.2>
+    <meta property="og:description" content="Calcule a precificação de um produto para o seu negócio, incluindo o CPA e o lucro com facilidade">
+    <meta property="og:image" content="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true">
+    <meta property="og:url" content="https://seu-site.com/pages/calculadora-de-precificacao">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Nome do Seu Site">
+    <meta property="og:site_name" content="AlanMugiwara DevLearning Website">
     
     <style>
         body {
@@ -22,7 +22,7 @@
             padding: 20px;
         }
         header img {
-            max-width: 100%; /* Defina a largura máxima da imagem para evitar que ela exceda o layout */
+            max-width: 100%;
             height: auto;
         }
         nav {
@@ -57,17 +57,17 @@
 </head>
 <body>
     <header>
-        <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true" alt="Descrição da imagem">
+    <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true" alt="Descrição da imagem">
     </header>
     <nav>
         <ul>
-            <li><a href="/index.html">Página Inicial</a></li>
-            <li><a href="/pages/mercadometro.html">Mercadômetro</a></li>
-            <li><a href="/pages/calculadora-de-precificacao.html">Calculadora de precificação</a></li>
+            <li><a href="https://alanmugiwara.github.io/">Página Inicial</a></li>
+            <li><a href="https://alanmugiwara.github.io/pages/mercadometro/">Mercadômetro</a></li>
+            <li><a href="https://alanmugiwara.github.io/pages/calculadora-de-precificacao/">Calculadora de precificação</a></li>
         </ul>
     </nav>
     <div class="container">
-        <h1>Calculadora de Precificação v1.2</h1>
+        <h1>Calculadora de Precificação</h1>
         <div class="form-group">
             <label for="custo_produto">Custo do Produto no Fornecedor (BRL)</label>
             <input type="text" id="custo_produto">
@@ -84,7 +84,7 @@
             <label for="porcentagem_loja_virtual">Porcentagem de Taxa da Loja Virtual (%)</label>
             <input type="text" id="porcentagem_loja_virtual">
         </div>
-        <div class "form-group">
+        <div class="form-group">
             <label for="porcentagem_checkout">Porcentagem Checkout Transparente (%)</label>
             <input type="text" id="porcentagem_checkout">
         </div>
@@ -103,15 +103,14 @@
             const porcentagemGateway = parseFloat(document.getElementById("porcentagem_gateway").value.replace(',', '.')) / 100;
             const porcentagemLojaVirtual = parseFloat(document.getElementById("porcentagem_loja_virtual").value.replace(',', '.')) / 100;
             const porcentagemCheckout = parseFloat(document.getElementById("porcentagem_checkout").value.replace(',', '.')) / 100;
-            const valorVenda = parseFloat(document.getElementById("valor_venda").value.replace(',', '.');
+            const valorVenda = parseFloat(document.getElementById("valor_venda").value.replace(',', '.'));
 
             const cpa = custoProduto + custoMarketing;
             const custoTotal = cpa + (porcentagemGateway * cpa) + (porcentagemLojaVirtual * cpa) + (porcentagemCheckout * cpa);
             const lucro = valorVenda - custoTotal;
-            const lucroPorcentagem = (lucro / custoTotal) * 100;
 
             document.getElementById("resultado_cpa").textContent = "CPA: R$" + cpa.toFixed(2);
-            document.getElementById("resultado_lucro").textContent = "Lucro: R$" + lucro.toFixed(2) + " (" + lucroPorcentagem.toFixed(2) + "%)";
+            document.getElementById("resultado_lucro").textContent = "Lucro: R$" + lucro.toFixed(2);
         }
     </script>
 </body>
