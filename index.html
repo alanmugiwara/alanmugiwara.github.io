@@ -50,7 +50,6 @@
             padding: 0;
             text-align: center;
             display: flex;
-            flex-wrap: wrap; /* Adicionado para melhorar a quebra de linhas */
         }
 
         nav a {
@@ -72,8 +71,8 @@
 
         .columns {
             display: flex;
-            flex-direction: column; /* Alterado para empilhar as colunas em dispositivos móveis */
-            align-items: center; /* Adicionado para centralizar as colunas em dispositivos móveis */
+            justify-content: space-between;
+            width: 100%;
             box-sizing: border-box;
         }
 
@@ -84,7 +83,21 @@
             margin: 15px; /* Margem padrão */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%; /* Alterado para ocupar 100% da largura em dispositivos móveis */
+        }
+
+        .column-left {
+            /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
+            width: 20%;
+        }
+
+        .column-right {
+            /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
+            width: 20%;
+        }
+
+        .column-center {
+            /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
+            width: 50%;
         }
 
         .button {
@@ -171,7 +184,7 @@
 
     <!-- Botão flutuante do WhatsApp -->
     <div class="whatsapp-button">
-        <a href="https://api.whatsapp.com/send?phone=5571993277032&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20no%20GitHub%20e%20gostaria%20de%20algumas%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20trabalho!" target="_blank" title="Chama no WhatsApp">
+        <a href="https://api.whatsapp.com/send/?phone=5571993277032&text&type=phone_number&app_absent=0" target="_blank" title="Chama no WhatsApp">
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
     </div>
