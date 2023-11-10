@@ -87,20 +87,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .column-left {
-            /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
-            width: 20%;
-        }
+.column-left {
+    /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
+    width: 20%;
+}
 
-        .column-right {
-            /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
-            width: 20%;
-        }
+.column-right {
+    /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
+    width: 20%;
+}
 
-        .column-center {
-            /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
-            width: 50%;
-        }
+.column-center {
+    /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
+    width: 50%;
+}
 
         .button {
             background-color: rgb(32, 119, 201);
@@ -112,13 +112,17 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin-top: 10px;
             cursor: pointer;
+        }
+
+        .button-column {
+            width: 45%; /* Ajuste a largura conforme necessário */
+            margin: 0 auto; /* Isso centralizará o botão na coluna */
         }
 
         /* Estilos para o botão flutuante do WhatsApp */
         .whatsapp-button {
-            position: fixed;
+            position: absolute;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
@@ -135,6 +139,29 @@
 
         .whatsapp-button img:hover {
             transform: scale(1.1);
+        }
+
+        /* Estilos para os botões de navegação no rodapé */
+        .footer-buttons {
+            display: flex;
+            justify-content: center; /* Alterado para centralizar os botões */
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        .footer-buttons button {
+            background-color: rgb(32, 119, 201);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px; /* Adicionado espaço entre os botões */
         }
     </style>
 </head>
@@ -167,7 +194,7 @@
             <!-- Conteúdo da coluna 1 -->
             <h2>Coluna 1</h2>
             <p>Conteúdo</p>
-            <button class="button">Botão</button>
+            <button class="button button-column">Botão</button>
         </div>
 
         <div class="column column-center">
@@ -180,7 +207,7 @@
             <!-- Conteúdo da coluna 3 -->
             <h2>Coluna 3</h2>
             <p>Conteúdo</p>
-            <button class="button">Botão</button>
+            <button class="button button-column">Botão</button>
         </div>
     </div>
 
@@ -189,6 +216,13 @@
         <a href="https://api.whatsapp.com/send/?phone=5571993277032&text&type=phone_number&app_absent=0" target="_blank" title="Chama no WhatsApp">
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
+    </div>
+
+    <!-- Botões de navegação no rodapé -->
+    <div class="footer-buttons">
+        <button class="button" onclick="window.history.back()">Voltar</button>
+        <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
+        <button class="button" onclick="window.history.forward()">Avançar</button>
     </div>
 </body>
 </html>
