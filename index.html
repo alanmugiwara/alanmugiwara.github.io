@@ -61,28 +61,6 @@
             margin: 0 10px;
         }
 
-        .slider {
-            width: 80%;
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .slide img {
-            width: 100%;
-            height: auto;
-        }
-
         .content {
             width: 80%;
             max-width: 1200px;
@@ -95,31 +73,35 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 1200px;
-            padding: 20px;
             box-sizing: border-box;
         }
 
         .column {
-            flex: 1;
             box-sizing: border-box;
             background-color: #fff;
             padding: 20px;
-            margin: 0 15px;
+            margin: 15px; /* Margem padrão */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .column-left {
-            margin-right: calc(15px + 30%);
+            /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
+            width: 20%;
         }
 
         .column-right {
-            margin-left: calc(15px + 30%);
+            /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
+            width: 20%;
+        }
+
+        .column-center {
+            /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
+            width: 50%;
         }
 
         .button {
-            background-color: #4CAF50;
+            background-color: rgb(32, 119, 201);
             color: white;
             padding: 10px;
             border: none;
@@ -130,7 +112,27 @@
             font-size: 16px;
             margin-top: 10px;
             cursor: pointer;
-            float: right; /* Adicionado para alinhar o botão à direita */
+        }
+
+        /* Estilos para o botão flutuante do WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 60px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .whatsapp-button img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -147,56 +149,44 @@
             <li><a href="index">Página Inicial</a></li>
             <li><a href="pages/mercadometro">Mercadômetro</a></li>
             <li><a href="pages/calculadora-de-precificacao">Calculadora de precificação</a></li>
+            <li><a href="https://github.com/alanmugiwara?tab=repositories">Respositórios GitHub</a></li>
+            <li><a href="https://www.jumpmanclubbrasil.com.br/">Projeto de Games</a></li>
+            <li><a href="pages/contato">Contato</a></li>
+            <!-- Adicione mais links conforme necessário -->
         </ul>
     </nav>
 
-    <div class="slider">
-        <div class="slides">
-            <div class="slide">
-                <a href="https://alanmugiwara.github.io" target="_blank">
-                    <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true" alt="Slide 1">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="https://alanmugiwara.github.io" target="_blank">
-                    <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true" alt="Slide 2">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="https://alanmugiwara.github.io" target="_blank">
-                    <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true" alt="Slide 3">
-                </a>
-            </div>
-        </div>
-    </div>
-
     <div class="content">
-        <!-- Conteúdo original sem a linha removida -->
+        <p>Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento</p>
     </div>
 
     <div class="columns">
         <div class="column column-left">
             <!-- Conteúdo da coluna 1 -->
             <h2>Coluna 1</h2>
-            <p>Conteúdo da coluna 1.</p>
+            <p>Conteúdo</p>
+            <button class="button">Botão</button>
         </div>
 
-        <div class="column">
-            <!-- Conteúdo da coluna 2 -->
+        <div class="column column-center">
+            <!-- Conteúdo da coluna 2 (centro) -->
             <h2>Coluna 2</h2>
-            <p>Conteúdo da coluna 2.</p>
+            <p>Conteúdo</p>
         </div>
 
         <div class="column column-right">
             <!-- Conteúdo da coluna 3 -->
             <h2>Coluna 3</h2>
-            <p>Conteúdo da coluna 3.</p>
-            <button class="button">Botão à Direita</button>
+            <p>Conteúdo</p>
+            <button class="button">Botão</button>
         </div>
     </div>
 
-    <script>
-        // Adicione o script para controlar o slider (se necessário)
-    </script>
+    <!-- Botão flutuante do WhatsApp -->
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send/?phone=5571993277032&text&type=phone_number&app_absent=0" target="_blank" title="Chama no WhatsApp">
+            <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
+        </a>
+    </div>
 </body>
 </html>
