@@ -50,6 +50,7 @@
             padding: 0;
             text-align: center;
             display: flex;
+            flex-wrap: wrap; /* Adicionado para melhorar a quebra de linhas */
         }
 
         nav a {
@@ -71,8 +72,8 @@
 
         .columns {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
+            flex-direction: column; /* Alterado para empilhar as colunas em dispositivos móveis */
+            align-items: center; /* Adicionado para centralizar as colunas em dispositivos móveis */
             box-sizing: border-box;
         }
 
@@ -83,21 +84,7 @@
             margin: 15px; /* Margem padrão */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .column-left {
-            /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
-            width: 20%;
-        }
-
-        .column-right {
-            /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
-            width: 20%;
-        }
-
-        .column-center {
-            /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
-            width: 50%;
+            width: 100%; /* Alterado para ocupar 100% da largura em dispositivos móveis */
         }
 
         .button {
