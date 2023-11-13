@@ -126,6 +126,7 @@
             bottom: 20px;
             right: 20px;
             z-index: 1000;
+            transition: bottom 0.3s ease; /* Adicionado para suavizar a transição */
         }
 
         .whatsapp-button img {
@@ -212,7 +213,7 @@
     </div>
 
     <!-- Botão flutuante do WhatsApp -->
-    <div class="whatsapp-button">
+    <div class="whatsapp-button" id="whatsappButton">
         <a href="https://api.whatsapp.com/send/?phone=5571993277032&text&type=phone_number&app_absent=0" target="_blank" title="Chama no WhatsApp">
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
@@ -224,5 +225,18 @@
         <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
         <button class="button" onclick="window.history.forward()">Avançar</button>
     </div>
+
+    <script>
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            var whatsappButton = document.getElementById("whatsappButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                whatsappButton.style.bottom = "70px";
+            } else {
+                whatsappButton.style.bottom = "20px";
+            }
+        }
+    </script>
 </body>
 </html>
