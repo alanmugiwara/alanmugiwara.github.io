@@ -126,7 +126,6 @@
             bottom: 20px;
             right: 20px;
             z-index: 1000;
-            transition: bottom 0.3s ease; /* Adicionado para suavizar a transição */
         }
 
         .whatsapp-button img {
@@ -189,7 +188,6 @@
     <div class="content">
         <p>Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento</p>
     </div>
-
     <div class="columns">
         <div class="column column-left">
             <!-- Conteúdo da coluna 1 -->
@@ -213,30 +211,65 @@
     </div>
 
     <!-- Botão flutuante do WhatsApp -->
-    <div class="whatsapp-button" id="whatsappButton">
-        <a href="https://api.whatsapp.com/send?phone=5571993277032&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20no%20GitHub%20e%20gostaria%20de%20algumas%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20trabalho!" target="_blank" title="Chama no WhatsApp">
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send/?phone=5571993277032&text&type=phone_number&app_absent=0" target="_blank" title="Chama no WhatsApp">
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
     </div>
 
     <!-- Botões de navegação no rodapé -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+    
+            .custom-button {
+                width: 120px;
+                height: 50px;
+                background-color: rgb(32, 119, 201);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <button class="custom-button">Usuários Online</button>
+    <p id="onlineUsers">0</p>
+    <script>
+        // Variável compartilhada para armazenar o número de usuários online
+        var onlineUsers = 0;
+
+        // Atualiza a contagem de usuários online na página
+        function updateOnlineUsers() {
+            document.getElementById('onlineUsers').innerText = onlineUsers;
+        }
+
+        // Incrementa o número de usuários online quando a página é carregada
+        window.onload = function() {
+            onlineUsers++;
+            updateOnlineUsers();
+        };
+
+        // Decrementa o número de usuários online quando a página é fechada/atualizada
+        window.onbeforeunload = function() {
+            onlineUsers--;
+            updateOnlineUsers();
+        };
+    </script>
     <div class="footer-buttons">
         <button class="button" onclick="window.history.back()">Voltar</button>
         <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
         <button class="button" onclick="window.history.forward()">Avançar</button>
     </div>
-
-    <script>
-        window.onscroll = function() { scrollFunction() };
-
-        function scrollFunction() {
-            var whatsappButton = document.getElementById("whatsappButton");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                whatsappButton.style.bottom = "70px";
-            } else {
-                whatsappButton.style.bottom = "20px";
-            }
-        }
-    </script>
 </body>
 </html>
