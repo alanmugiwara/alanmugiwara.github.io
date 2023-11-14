@@ -50,8 +50,8 @@
             padding: 0;
             text-align: center;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-wrap: wrap; /* Adicionado para melhorar a quebra de linhas */
+            justify-content: center; /* Adicionado para centralizar os itens na versão mobile */
         }
 
         nav a {
@@ -73,8 +73,7 @@
 
         .columns {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
             width: 100%;
             box-sizing: border-box;
         }
@@ -83,14 +82,28 @@
             box-sizing: border-box;
             background-color: #fff;
             padding: 20px;
-            margin: 15px 0;
+            margin: 15px; /* Margem padrão */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%; /* Ocupar a largura total por padrão */
         }
 
+.column-left {
+    /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
+    width: 20%;
+}
+
+.column-right {
+    /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
+    width: 20%;
+}
+
+.column-center {
+    /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
+    width: 50%;
+}
+
         .button {
-            background-color: rgb(38, 127, 211);
+            background-color: rgb(32, 119, 201);
             color: white;
             padding: 10px;
             border: none;
@@ -100,19 +113,23 @@
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
-            width: 100%; /* Largura total para ocupar o espaço disponível */
-            box-sizing: border-box;
         }
 
+        .button-column {
+            width: 45%; /* Ajuste a largura conforme necessário */
+            margin: 0 auto; /* Isso centralizará o botão na coluna */
+        }
+
+        /* Estilos para o botão flutuante do WhatsApp */
         .whatsapp-button {
-            position: fixed;
+            position: absolute;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
         }
 
         .whatsapp-button img {
-            width: 60px;
+            width: 60px; /* Ajuste o tamanho conforme necessário */
             height: auto;
             border-radius: 50%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -124,9 +141,10 @@
             transform: scale(1.1);
         }
 
+        /* Estilos para os botões de navegação no rodapé */
         .footer-buttons {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Alterado para centralizar os botões */
             width: 100%;
             box-sizing: border-box;
             margin-top: 20px;
@@ -143,25 +161,7 @@
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
-            margin: 0 5px;
-        }
-
-        #userCount {
-            color: #333;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        @media only screen and (min-width: 600px) {
-            .column {
-                width: 48%; /* Duas colunas lado a lado em telas maiores */
-            }
-        }
-
-        @media only screen and (min-width: 768px) {
-            .columns {
-                justify-content: space-between;
-            }
+            margin: 0 5px; /* Adicionado espaço entre os botões */
         }
     </style>
 </head>
@@ -181,34 +181,34 @@
             <li><a href="https://github.com/alanmugiwara?tab=repositories">Repositórios GitHub</a></li>
             <li><a href="https://www.jumpmanclubbrasil.com.br/">Projeto de Games</a></li>
             <li><a href="pages/contato">Contato</a></li>
+            <!-- Adicione mais links conforme necessário -->
         </ul>
     </nav>
 
     <div class="content">
         <p>Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento</p>
     </div>
-
     <div class="columns">
         <div class="column column-left">
+            <!-- Conteúdo da coluna 1 -->
             <h2>Coluna 1</h2>
             <p>Conteúdo</p>
             <button class="button button-column">Botão</button>
         </div>
 
         <div class="column column-center">
+            <!-- Conteúdo da coluna 2 (centro) -->
             <h2>Coluna 2</h2>
             <p>Conteúdo</p>
         </div>
 
         <div class="column column-right">
+            <!-- Conteúdo da coluna 3 -->
             <h2>Coluna 3</h2>
             <p>Conteúdo</p>
             <button class="button button-column">Botão</button>
         </div>
     </div>
-
-    <script type="text/javascript" src="https://www.usersonline.org/uo-dW2a7AC8wawB4cxB-6-0.js"></script><a target="_blank"><img src="" 
-        alt="" border="0"></a>
 
     <!-- Botão flutuante do WhatsApp -->
     <div class="whatsapp-button">
@@ -218,6 +218,31 @@
     </div>
 
     <!-- Botões de navegação no rodapé -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+    
+            .custom-button {
+                width: 120px;
+                height: 50px;
+                background-color: rgb(32, 119, 201);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="https://www.usersonline.org/uo-dW2a7AC8wawB4cxB-6-0.js"></script><a target="_blank">
     <div class="footer-buttons">
         <button class="button" onclick="window.history.back()">Voltar</button>
         <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
