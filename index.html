@@ -150,6 +150,17 @@
             cursor: pointer;
             margin: 0 5px; /* Adicionado espaço entre os botões */
         }
+
+        /* Adicionando regras de mídia para estilos específicos para desktop */
+        @media only screen and (min-width: 768px) {
+            .button {
+                width: auto; /* Largura automática para desktop */
+            }
+
+            .footer-buttons button {
+                margin: 0; /* Removido o espaço entre os botões para desktop */
+            }
+        }
     </style>
 </head>
 <body>
