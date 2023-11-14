@@ -73,7 +73,8 @@
 
         .columns {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
             width: 100%;
             box-sizing: border-box;
         }
@@ -82,21 +83,10 @@
             box-sizing: border-box;
             background-color: #fff;
             padding: 20px;
-            margin: 15px;
+            margin: 15px 0;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .column-left {
-            width: 20%;
-        }
-
-        .column-right {
-            width: 20%;
-        }
-
-        .column-center {
-            width: 50%;
+            width: 100%; /* Ocupar a largura total por padrão */
         }
 
         .button {
@@ -110,15 +100,12 @@
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
-        }
-
-        .button-column {
-            width: 45%;
-            margin: 0 auto;
+            width: 100%; /* Largura total para ocupar o espaço disponível */
+            box-sizing: border-box;
         }
 
         .whatsapp-button {
-            position: absolute;
+            position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
@@ -164,6 +151,18 @@
             font-size: 18px;
             margin-bottom: 10px;
         }
+
+        @media only screen and (min-width: 600px) {
+            .column {
+                width: 48%; /* Duas colunas lado a lado em telas maiores */
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .columns {
+                justify-content: space-between;
+            }
+        }
     </style>
 </head>
 <body>
@@ -184,8 +183,11 @@
             <li><a href="pages/contato">Contato</a></li>
         </ul>
     </nav>
+
+    <div class="content">
         <p>Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento</p>
     </div>
+
     <div class="columns">
         <div class="column column-left">
             <h2>Coluna 1</h2>
@@ -204,13 +206,18 @@
             <button class="button button-column">Botão</button>
         </div>
     </div>
-    <script type="text/javascript" src="https://www.usersonline.org/uo-dW2a7AC8wawB4cxB-6-0.js"></script><a target="_blank"><img src="https://www.usersonline.org/selo/selo-uo.gif" 
+
+    <script type="text/javascript" src="https://www.usersonline.org/uo-dW2a7AC8wawB4cxB-6-0.js"></script><a target="_blank"> 
         alt="" border="0"></a>
+
+    <!-- Botão flutuante do WhatsApp -->
     <div class="whatsapp-button">
         <a href="https://api.whatsapp.com/send/?phone=5571993277032&text&type=phone_number&app_absent=0" target="_blank" title="Chama no WhatsApp">
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
     </div>
+
+    <!-- Botões de navegação no rodapé -->
     <div class="footer-buttons">
         <button class="button" onclick="window.history.back()">Voltar</button>
         <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
