@@ -50,8 +50,8 @@
             padding: 0;
             text-align: center;
             display: flex;
-            flex-wrap: wrap; /* Adicionado para melhorar a quebra de linhas */
-            justify-content: center; /* Adicionado para centralizar os itens na versão mobile */
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav a {
@@ -82,25 +82,22 @@
             box-sizing: border-box;
             background-color: #fff;
             padding: 20px;
-            margin: 15px; /* Margem padrão */
+            margin: 15px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-.column-left {
-    /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
-    width: 20%;
-}
+        .column-left {
+            width: 20%;
+        }
 
-.column-right {
-    /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
-    width: 20%;
-}
+        .column-right {
+            width: 20%;
+        }
 
-.column-center {
-    /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
-    width: 50%;
-}
+        .column-center {
+            width: 50%;
+        }
 
         .button {
             background-color: rgb(32, 119, 201);
@@ -116,11 +113,10 @@
         }
 
         .button-column {
-            width: 45%; /* Ajuste a largura conforme necessário */
-            margin: 0 auto; /* Isso centralizará o botão na coluna */
+            width: 45%;
+            margin: 0 auto;
         }
 
-        /* Estilos para o botão flutuante do WhatsApp */
         .whatsapp-button {
             position: absolute;
             bottom: 20px;
@@ -129,7 +125,7 @@
         }
 
         .whatsapp-button img {
-            width: 60px; /* Ajuste o tamanho conforme necessário */
+            width: 60px;
             height: auto;
             border-radius: 50%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -141,10 +137,9 @@
             transform: scale(1.1);
         }
 
-        /* Estilos para os botões de navegação no rodapé */
         .footer-buttons {
             display: flex;
-            justify-content: center; /* Alterado para centralizar os botões */
+            justify-content: center;
             width: 100%;
             box-sizing: border-box;
             margin-top: 20px;
@@ -161,7 +156,13 @@
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
-            margin: 0 5px; /* Adicionado espaço entre os botões */
+            margin: 0 5px;
+        }
+
+        #userCount {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -181,91 +182,34 @@
             <li><a href="https://github.com/alanmugiwara?tab=repositories">Repositórios GitHub</a></li>
             <li><a href="https://www.jumpmanclubbrasil.com.br/">Projeto de Games</a></li>
             <li><a href="pages/contato">Contato</a></li>
-            <!-- Adicione mais links conforme necessário -->
         </ul>
     </nav>
-
-    <div class="content">
         <p>Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento</p>
     </div>
     <div class="columns">
         <div class="column column-left">
-            <!-- Conteúdo da coluna 1 -->
             <h2>Coluna 1</h2>
             <p>Conteúdo</p>
             <button class="button button-column">Botão</button>
         </div>
 
         <div class="column column-center">
-            <!-- Conteúdo da coluna 2 (centro) -->
             <h2>Coluna 2</h2>
             <p>Conteúdo</p>
         </div>
 
         <div class="column column-right">
-            <!-- Conteúdo da coluna 3 -->
             <h2>Coluna 3</h2>
             <p>Conteúdo</p>
             <button class="button button-column">Botão</button>
         </div>
     </div>
 
-    <!-- Botão flutuante do WhatsApp -->
     <div class="whatsapp-button">
         <a href="https://api.whatsapp.com/send/?phone=5571993277032&text&type=phone_number&app_absent=0" target="_blank" title="Chama no WhatsApp">
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
     </div>
-
-    <!-- Botões de navegação no rodapé -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                margin: 0;
-            }
-    
-            .custom-button {
-                width: 120px;
-                height: 50px;
-                background-color: rgb(32, 119, 201);
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-    
-        <button class="custom-button">Usuários Online</button>
-    <p id="onlineUsers">0</p>
-    <script>
-        // Variável compartilhada para armazenar o número de usuários online
-        var onlineUsers = 0;
-
-        // Atualiza a contagem de usuários online na página
-        function updateOnlineUsers() {
-            document.getElementById('onlineUsers').innerText = onlineUsers;
-        }
-
-        // Incrementa o número de usuários online quando a página é carregada
-        window.onload = function() {
-            onlineUsers++;
-            updateOnlineUsers();
-        };
-
-        // Decrementa o número de usuários online quando a página é fechada/atualizada
-        window.onbeforeunload = function() {
-            onlineUsers--;
-            updateOnlineUsers();
-        };
-    </script>
     <div class="footer-buttons">
         <button class="button" onclick="window.history.back()">Voltar</button>
         <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
