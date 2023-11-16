@@ -87,11 +87,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .column-left,
-        .column-right,
-        .column-center {
-            width: 100%; /* Largura total em dispositivos móveis */
-        }
+.column-left {
+    /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
+    width: 20%;
+}
+
+.column-right {
+    /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
+    width: 20%;
+}
+
+.column-center {
+    /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
+    width: 50%;
+}
 
         .button {
             background-color: rgb(32, 119, 201);
@@ -104,13 +113,16 @@
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
-            width: 100%; /* Largura total para ocupar o espaço disponível */
-            box-sizing: border-box;
-            margin-top: 10px; /* Adicionado espaçamento superior */
         }
 
+        .button-column {
+            width: 45%; /* Ajuste a largura conforme necessário */
+            margin: 0 auto; /* Isso centralizará o botão na coluna */
+        }
+
+        /* Estilos para o botão flutuante do WhatsApp */
         .whatsapp-button {
-            position: fixed;
+            position: absolute;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
@@ -129,6 +141,7 @@
             transform: scale(1.1);
         }
 
+        /* Estilos para os botões de navegação no rodapé */
         .footer-buttons {
             display: flex;
             justify-content: center; /* Alterado para centralizar os botões */
@@ -149,17 +162,6 @@
             font-size: 16px;
             cursor: pointer;
             margin: 0 5px; /* Adicionado espaço entre os botões */
-        }
-
-        /* Adicionando regras de mídia para estilos específicos para desktop */
-        @media only screen and (min-width: 768px) {
-            .button {
-                width: auto; /* Largura automática para desktop */
-            }
-
-            .footer-buttons button {
-                margin: 0; /* Removido o espaço entre os botões para desktop */
-            }
         }
     </style>
 </head>
@@ -186,7 +188,6 @@
     <div class="content">
         <p>Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento</p>
     </div>
-
     <div class="columns">
         <div class="column column-left">
             <!-- Conteúdo da coluna 1 -->
@@ -215,8 +216,34 @@
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
     </div>
-        <script type="text/javascript" src="https://www.usersonline.org/uo-1d02Wx9A2Ya767aZ-6-0.js"></script>
+
     <!-- Botões de navegação no rodapé -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #f4f4f4;
+            }
+            .custom-button {
+                width: 120px;
+                height: 50px;
+                background-color: rgb(32, 119, 201);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="https://www.usersonline.org/uo-1d02Wx9A2Ya767aZ-6-0.js"></script>
     <div class="footer-buttons">
         <button class="button" onclick="window.history.back()">Voltar</button>
         <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
