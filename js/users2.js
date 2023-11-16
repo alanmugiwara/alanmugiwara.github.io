@@ -1,4 +1,4 @@
-document.write('<img src="https://www.usersonline.org/estilos/6.gif"> <span style="font-family:Trebuchet MS; color: #333333; font-size:14px; padding:0 0 0 4px;">2 Online</span>');
+document.write('<img src="https://www.usersonline.org/estilos/6.gif"> <a style="font-family:Trebuchet MS; color: #333333; font-size:14px; text-decoration:none; padding:0 0 0 4px;" href="https://www.usersonline.org/">0 Online</a>');
 var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,3526775,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
