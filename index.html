@@ -11,6 +11,36 @@
     <meta property="og:site_name" content="AlanMugiwara DevLearning Website">
 
     <style>
+    #slideshow {
+    max-width: 1102px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto; /* Centraliza o slideshow na página */
+    margin-right: 29.5%; /* Ajusta a margem direita conforme necessário */
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .slider-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -184,10 +214,57 @@
             <!-- Adicione mais links conforme necessário -->
         </ul>
     </nav>
-
-    <div class="content">
-        <p>Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento</p>
     </div>
+    <div id="slideshow">
+        <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/1.png" alt="Slide 1">
+        <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/2.png" alt="Slide 2">
+        <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/3.png" alt="Slide 3">
+        <div class="slider-indicators">
+            <div class="indicator" onclick="currentSlide(0)"></div>
+            <div class="indicator" onclick="currentSlide(1)"></div>
+            <div class="indicator" onclick="currentSlide(2)"></div>
+        </div>
+    </div>
+    
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('#slideshow img');
+        const totalSlides = slides.length;
+        const indicators = document.querySelectorAll('.indicator');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+    
+        function updateIndicators(index) {
+            indicators.forEach((indicator, i) => {
+                indicator.style.backgroundColor = i === index ? '#555' : '#bbb';
+            });
+        }
+    
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+            updateIndicators(currentSlideIndex);
+        }
+    
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+            updateIndicators(currentSlideIndex);
+        }
+    
+        function startSlideshow() {
+            setInterval(nextSlide, 3000); // Muda o slide a cada 2 segundos (2000 milissegundos)
+        }
+    
+        // Exibe o primeiro slide, inicia o slideshow e atualiza os indicadores
+        showSlide(currentSlideIndex);
+        startSlideshow();
+        updateIndicators(currentSlideIndex);
+    </script>
     <div class="columns">
         <div class="column column-left">
             <!-- Conteúdo da coluna 1 (esquerda) -->
