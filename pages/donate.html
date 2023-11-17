@@ -74,7 +74,7 @@
         .columns {
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            width: 90%;     /* Nível de distâncias das colunas nas aextremidades da página */
             box-sizing: border-box;
         }
 
@@ -82,26 +82,20 @@
             box-sizing: border-box;
             background-color: #fff;
             padding: 20px;
-            margin: 15px; /* Margem padrão */
+            margin: px; /* Margem padrão da altura da página */
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(32, 31, 31, 0.1);
         }
 
 .column-left {
     /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
-    width: 20;
+    width: calc(100% - 25%);
 }
 
 .column-right {
     /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
     width: 20%;
 }
-
-.column-center {
-    /* Ajuste manual da largura para a coluna do centro (altere conforme necessário) */
-    width: 60%;
-}
-
         .button {
             background-color: rgb(32, 119, 201);
             color: white;
@@ -116,7 +110,7 @@
         }
 
         .button-column {
-            width: 55%; /* Ajuste a largura conforme necessário */
+            width: 55%; /* Tamanho dos botões do 1º menu da direita */
             margin: 0 auto; /* Isso centralizará o botão na coluna */
         }
 
@@ -141,28 +135,34 @@
             transform: scale(1.1);
         }
 
-        /* Estilos para os botões de navegação no rodapé */
+        /* Estilos para os botões de navegação no rodapé voltar, home, e avançar */
         .footer-buttons {
-            display: flex;
-            justify-content: center; /* Alterado para centralizar os botões */
-            width: 100%;
-            box-sizing: border-box;
-            margin-top: 20px;
-        }
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-right: 20%; /* Ajusta o valor conforme necessário para mover para a direita */
+    margin-bottom: 10px;
+}
 
-        .footer-buttons button {
-            background-color: rgb(32, 119, 201);
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 0 5px; /* Adicionado espaço entre os botões */
-        }
+.footer-buttons button {
+    background-color: rgb(32, 119, 201);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.script-container {
+    margin-right: 21%; /* Ajuste o valor conforme necessário para mover para a esquerda */
+}
     </style>
 </head>
 <body>
@@ -191,33 +191,28 @@
     <div class="columns">
         <div class="column column-left">
             <!-- Conteúdo da coluna 1 (esquerda) -->
-            <h3>Me pague um café</h3>
-            <a href="https://alanmugiwara.github.io/">
-                <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/cofee.gif">
-              </a>
-            <br><br/>
-            <h3>Redes sociais</h3>
-        </div>
 
-        <div class="column column-center">
-            <!-- Conteúdo da coluna 2 (centro) -->
-            <h3>Coluna 2</h3>
-            <p>Conteúdo</p>
         </div>
 
         <div class="column column-right">
             <!-- Conteúdo da coluna 3 (direita()) -->
-            <h3>Downloads</h><br>
-            <br><button class="button button-column">Android Apps</button><br/>
+            <h4>Downloads<h4>
+            <button class="button button-column">Android Apps</button><br/>
             <br><button class="button button-column">C++ Apps</button><br/>
             <br><button class="button button-column">Java Apps</button><br/>
             <br><button class="button button-column">Python Apps</button><br/>
+                        <h4>Me pague um café</h4>
+            <a href="https://alanmugiwara.github.io/pages/donate">
+                <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/cofee.gif">
+              </a>
+            <br><br/>
+            <h4>Redes sociais</h4>
         </div>
     </div>
 
     <!-- Botão flutuante do WhatsApp -->
     <div class="whatsapp-button">
-        <a href="5571993277032&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20no%20GitHub%20e%20gostaria%20de%20algumas%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20trabalho!" target="_blank" title="Chama no WhatsApp">
+        <a href="https://api.whatsapp.com/send?phone=5571993277032&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20no%20GitHub%20e%20gostaria%20de%20algumas%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20trabalho!" target="_blank" title="Chama no WhatsApp">
             <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
         </a>
     </div>
@@ -247,8 +242,10 @@
             }
         </style>
     </head>
-    <body>
-        <script type="text/javascript" src="https://www.usersonline.org/uo-1d02Wx9A2Ya767aZ-6-0.js"></script>
+    <body><br>
+        <div class="script-container">
+            <script type="text/javascript" src="https://www.usersonline.org/uo-1d02Wx9A2Ya767aZ-6-0.js"></script>
+        </div>
     <div class="footer-buttons">
         <button class="button" onclick="window.history.back()">Voltar</button>
         <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
