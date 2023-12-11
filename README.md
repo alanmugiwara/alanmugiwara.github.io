@@ -1,2 +1,2 @@
 # alanmugiwara.github.io
-Waebsite Alanmugiwara 
+Website Alanmugiwara 
