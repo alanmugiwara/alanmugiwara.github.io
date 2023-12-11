@@ -1,15 +1,31 @@
-alert('Boas vindas ao jogo do número secreto'); //Alert exibe mensagem na tela
-let numeroSecreto = 29; //Let declara a variável dentro de um bloco {}
-let chute = prompt('Escolha um número entre 1 e 30'); //Prompt equivale ao input - que solicita dados  ao usuário
-//Acima estamos determinando que a variável chute recerá o mesmo valor que for atribuído no "prompt"
+<!DOCTYPE html>
+<html lang="en">
 
-//LET - Ao usar let, você está restrigindo o escopo da variável ao bloco em que ela é declarada. 
-//O escopo de bloco significa que a variável só é acessível dentro do conjunto de chaves {} onde foi definida. 
-//Isso ajuda a evitar problemas relacionados à poluição do escopo e fornece maior controle sobre onde a variável pode ser usada.
-// =(siginifica RECEBE) e ==(Significa realamente igualdade)
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
 
-if (numeroSecreto == chute) {
-    alert('Você descobriu o número secreto (29)');
-} 
-else {alert('O número digitado está incoreto, aperte "F5" e tente novamente')}
+<body>
+    <div class="container">
+        <div class="container__conteudo">
+            <img src="./img/robot.png" alt="robô mergulhador" class="container__imagem-robo" />
+            <div class="container__informacoes">
+                <img src="./img/trophy.png" alt="ícone de um troféu" />
+                 <div class="container__texto">
+                    <h1>Você <span class="container__texto-azul">acertou!</span></h1>
+                    <h2>Você descobriu o número secreto!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" defer></script>
+</body>
 
+</html>
