@@ -1,4 +1,4 @@
-alert('Boas vindas ao jogo do número secreto.'); //Alert exibe mensagem na tela
+alert('Boas vindas ao Fortune Game - O jogo do número da sorte.\nUm Jogo simples escrito em Java Script.'); //Alert exibe mensagem na tela
 let numeroSecreto = 29; //Let declara a variável dentro de um bloco {}
 console.log(numeroSecreto)
 let chute //Prompt equivale ao input - que solicita dados  ao usuário
