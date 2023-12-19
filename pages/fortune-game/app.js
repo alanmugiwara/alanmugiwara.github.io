@@ -7,7 +7,7 @@ while (chute != numeroSecreto) {
     chute = prompt('Por favor, escolha um número entre 1 e 30.');
 
     if (numeroSecreto == chute) {
-        alert(`Parabéns! Você descobriu o número secreto!/nQue é ${numeroSecreto}!`);
+        alert(`Parabéns! Você descobriu o número secreto!\nQue é ${numeroSecreto}!`);
     } else {
         if (chute > numeroSecreto) {
             alert(`O número secreto na verdade é menor que ${chute}.`);
