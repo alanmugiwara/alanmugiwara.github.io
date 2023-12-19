@@ -1,5 +1,5 @@
 alert('Boas vindas ao >Fortune Game<\nO jogo do número da sorte!\nUm Jogo simples escrito em Java Script.');
-let numeroSecreto = 29;
+let numeroSecreto = 15;
 console.log(numeroSecreto)
 let chute;
 let tentativa = 1;
