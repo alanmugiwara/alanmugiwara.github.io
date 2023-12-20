@@ -1,5 +1,5 @@
 alert('Boas vindas ao >Fortune Game<\nO jogo do número da sorte!\nUm Jogo simples escrito em Java Script.');
-alert('Caso queira sair do jogo digite "sair"\nna barra de informações');
+alert('Caso queira sair do jogo digite "sair"\nna barra de informações.');
 let numeroSecreto = 15;
 console.log(numeroSecreto)
 let chute;
