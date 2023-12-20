@@ -6,15 +6,15 @@ let chute;
 let tentativa = 1;
 
 while (chute != numeroSecreto) {
-    chute = prompt('Por favor, escolha um número entre 1 e 30.');
-    
-    if (chute == "sair" || "SAIR" || "Sair") {
-      alert('Você saiu do jogo.');
-      break;
+  chute = prompt('Por favor, escolha um número entre 1 e 30.');
+
+  if (chute == "sair" || "SAIR" || "Sair") {
+    alert('Você saiu do jogo.');
+    break;
   }
 
-    if (numeroSecreto == chute) {
-        alert(`Parabéns! Você descobriu o número secreto!\nQue é ${numeroSecreto}! Em ${tentativa} tentativas, miseravi!`);
+  if (numeroSecreto == chute) {
+    alert(`Parabéns! Você descobriu o número secreto!\nQue é ${numeroSecreto}! Em ${tentativa} tentativas, miseravi!`);
   } else {
     if (chute > numeroSecreto) {
       prompt("Acho que você não leu.\nVocê digitou um número\nmaior que 30!");
