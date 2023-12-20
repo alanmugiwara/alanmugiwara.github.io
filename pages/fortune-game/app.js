@@ -21,9 +21,9 @@ while (chute != numeroSecreto) {
         prompt("Acho que você não leu.\nVocê digitou um número\nmaior que 30!");
       } else {
         if (chute > numeroSecreto) {
-          alert(`O número secreto na verdade é menor que ${chute}`);
+          alert(`O número secreto na verdade é menor que ${chute}.`);
         } else {
-          alert(`O número secreto na verdade é maior que ${chute}`);
+          alert(`O número secreto na verdade é maior que ${chute}.`);
         }
         tentativa++;
       }
