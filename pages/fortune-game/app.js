@@ -4,7 +4,7 @@ let numeroSecreto = 15;
 console.log(numeroSecreto);
 let chute;
 let tentativa = 1;
-let maxNum = 80;
+let maxNum = 50;
 
 while (chute != numeroSecreto) {
   chute = prompt(`Por favor, escolha um número entre 1 e ${maxNum}.`);
