@@ -4,21 +4,20 @@ let numeroSecreto = 15;
 console.log(numeroSecreto);
 let chute;
 let tentativa = 1;
+let maxNum = 80;
 
 while (chute != numeroSecreto) {
-  chute = prompt("Por favor, escolha um número entre 1 e 30.");
+  chute = prompt(`Por favor, escolha um número entre 1 e ${maxNum}.`);
   if (numeroSecreto == chute) {
-    alert(
-      `Parabéns! Você descobriu o número secreto!\nQue é ${numeroSecreto}! Em ${tentativa} tentativas, miseravi!`
-    );
+    alert(`Parabéns! Você descobriu o número secreto!\nQue é ${numeroSecreto}! Em ${tentativa} tentativas, miseravi!`);
   } else {
     if (chute.toLowerCase() === 'sair') {
       alert("Você saiu do jogo.");
       break;
 
     } else {
-      if (chute > numeroSecreto) {
-        prompt("Acho que você não leu.\nVocê digitou um número\nmaior que 30!");
+      if (chute > maxNum) {
+        alert(`Acho que você não leu.\nVocê digitou um número\nmaior que ${maxNum}!`);
       } else {
         if (chute > numeroSecreto) {
           alert(`O número secreto na verdade é menor que ${chute}.`);
