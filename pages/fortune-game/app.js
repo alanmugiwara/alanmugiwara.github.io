@@ -1,4 +1,4 @@
-alert("Boas vindas ao >Fortune Game<\nO jogo do número da sorte!\nUm Jogo simples escrito em Java Script.");
+alert("Boas vindas ao >Fortune Game<\nO jogo do número da sorte!\nUm Jogo simples escrito em\nOJava Script, CSS e html.");
 let numeroSecreto = parseInt(Math.random() * 10 + 1)
 console.log(numeroSecreto);
 let chute;
