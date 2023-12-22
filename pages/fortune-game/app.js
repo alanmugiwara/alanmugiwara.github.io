@@ -23,8 +23,8 @@ while (chute != numeroSecreto) {
   }
 }
 
-let palavraTentativa = tentativa > 1 ? 'tentativas' : 'tentativa';
-alert(`Parabéns! Você descobriu o número secreto!\nQue é ${numeroSecreto}! Em ${tentativa} ${palavraTentativa}!`);
+let palavraTentativa = tentativa > 1 ? 'tentativas' : 'tentativa, miseravi';
+alert(`Parabéns!\nVocê descobriu o número secreto!\nQue é >${numeroSecreto}< Em ${tentativa} ${palavraTentativa}!`);
 
 
 /*
