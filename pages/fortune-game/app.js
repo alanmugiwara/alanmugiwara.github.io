@@ -1,10 +1,9 @@
-alert("Boas vindas ao >Fortune Game<\nO jogo do número da sorte!\nUm Jogo simples escrito em\nOJava Script, CSS e html.");
+alert('Boas vindas ao >Fortune Game<\nO jogo do número da sorte!\nUm Jogo simples escrito em\nOJava Script, CSS e html.');
 let numeroSecreto = parseInt(Math.random() * 10 + 1)
 console.log(numeroSecreto);
 let chute;
 let tentativa = 1;
 let maxNum = 10;
-
 
 while (chute != numeroSecreto) {
   chute = prompt(`Por favor, escolha um número entre 1 e ${maxNum}.`);
