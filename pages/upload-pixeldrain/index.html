@@ -8,10 +8,8 @@
 <body>
 
   <script>
-    // Solicitar a chave da API por meio de um prompt
     const api_key = prompt("Por favor, insira sua chave de API:");
 
-    // Se o usuário clicar em Cancelar ou inserir uma chave vazia, encerrar
     if (!api_key) {
       alert("Chave de API inválida ou não fornecida. A página será recarregada.");
       location.reload();
@@ -28,7 +26,10 @@
         const formData = new FormData();
         formData.append('file', file);
 
-        const resp = await fetch("https://pixeldrain.com/api/file", {
+        const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS Anywhere
+        const pixeldrainApiUrl = 'https://pixeldrain.com/api/file';
+
+        const resp = await fetch(corsProxyUrl + pixeldrainApiUrl, {
           method: "POST",
           headers: {
             "Authorization": "Basic " + btoa(":" + api_key),
