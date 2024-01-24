@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload de Arquivos</title>
+</head>
+<body>
+
+  <script>
+    // Solicitar a chave da API por meio de um prompt
+    const api_key = prompt("Por favor, insira sua chave de API:");
+
+    // Se o usuário clicar em Cancelar ou inserir uma chave vazia, encerrar
+    if (!api_key) {
+      alert("Chave de API inválida ou não fornecida. A página será recarregada.");
+      location.reload();
+    }
+
+    const openFilePrompt = () => {
+      document.getElementById('fileInput').click();
+    };
+
+    const handleFileUpload = async (event) => {
+      const file = event.target.files[0];
+
+      if (file) {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const resp = await fetch("https://pixeldrain.com/api/file", {
+          method: "POST",
+          headers: {
+            "Authorization": "Basic " + btoa(":" + api_key),
+          },
+          body: formData,
+        });
+
+        if (resp.status >= 400) {
+          throw new Error(await resp.json());
+        }
+
+        const result = await resp.json();
+        console.log(result);
+      } else {
+        console.log('Nenhum arquivo selecionado.');
+      }
+    };
+
+    document.write('<input type="file" id="fileInput" style="display:none">');
+    document.write('<button onclick="openFilePrompt()">Enviar Arquivo</button>');
+
+    document.getElementById('fileInput').addEventListener('change', handleFileUpload);
+  </script>
+
+</body>
+</html>
