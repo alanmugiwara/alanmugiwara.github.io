@@ -6,11 +6,19 @@
 
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
+console.log(numeroSecreto);
 
 function exibirTextoNaTela(tag, texto) {
     let elemento = document.querySelector(tag);
     elemento.innerHTML = texto;
 }
+
+function ExibirWellcome() {
+    exibirTextoNaTela('h1', 'Fortune Game versão Alpha');
+    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+}
+
+ExibirWellcome();
 
 exibirTextoNaTela('h1', 'Fortune Game versão Alpha');
 exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
@@ -24,6 +32,7 @@ function verificarChute() {
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela('p', mensagemTentativas);
+        document.getElementById("reiniciar").disabled = false;
     }
     else {
         if (chute > numeroSecreto) {
@@ -35,9 +44,23 @@ function verificarChute() {
         }
         // tentativas = tentativas + 1/ (versão mais extensa do )
         tentativas++;
+        limparCampo()
     }
 }
 
 function gerarNumeroAleatorio() {
     return parseInt(Math.random() * 10 + 1);
+}
+
+function limparCampo() {
+    chute = document.querySelector('input');
+    chute.value = '';
+}
+
+function rebootGame() {
+    numeroSecreto = gerarNumeroAleatorio();
+    limparCampo();
+    tentativas = 1;
+    ExibirWellcome();
+    document.getElementById('reiniciar').setAttribute('disabled', true);
 }
