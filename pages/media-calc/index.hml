@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <main class="container">
+        <script src="app.js"></script>
+    </main>
+</body>
+</html>
