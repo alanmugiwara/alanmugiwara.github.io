@@ -1,4 +1,4 @@
-alert('Boas vindas ao calculador de medias!');
+alert('Boas vindas ao calculador de médias!');
 let aluno = prompt('Digite o Nome do Aluno ');
 let nota1 = prompt('Digite o valor da 1ª nota ') * 1;
 let nota2 = prompt('Digite o valor da 2ª nota ') * 1;
