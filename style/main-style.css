@@ -1,11 +1,3 @@
-* {
-  cursor: url('/assets/cursor-pixel.png') 0 0, auto !important;
-}
-
-a, button {
-  cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
-}
-
 body {
   font-family: "Fira Code", monospace;
   cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
@@ -13,6 +5,10 @@ body {
   color: #c9d1d9;
   margin: 0;
   padding: 0;
+}
+
+a, button {
+  cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
 }
 
 .cursor-pointer {
