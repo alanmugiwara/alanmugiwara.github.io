@@ -2,332 +2,52 @@
 <html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="AlanMugiwara DevLearning Website">
-    <meta property="og:description" content="Aqui irei compartilhar experimentos do meu aprendizado em desenvolvimento.">
-    <meta property="og:image" content="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/logo2.png?raw=true">
-    <meta property="og:url" content="https://alanmugiwara.github.io/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Melhor exibição mobile -->
+    <meta property="og:description" content="Portifólio, projetos e contato.">
+    <meta name="author" content="Álan Cruz"> <!-- Melhor visibilidade SEO -->
+    <meta name="keywords" content="portfólio, projetos, contato, tecnologia"> <!-- Melhor visibilidade SEO -->
+    <meta property="og:title" content="Álan Cruz Tec | Website"> <!-- Meta Tags Open Graph (og): Melhoram a visualização em social media sharing -->
+    <meta property="og:description" content="Portfólio, projetos e contato.">
+    <meta property="og:image" content="thumbnail-url"> 
+    <meta property="og:image:width" content="1200"> <!-- Melhor exibição em plataformas sociais -->
+    <meta property="og:image:height" content="630"> <!-- Melhor exibição em plataformas sociais -->
+    <meta property="og:url" content=" https://alancruz.tec.br">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="AlanMugiwara DevLearning Website">
-
-    <style>
-    #slideshow {
-    max-width: 1102px;
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto; /* Centraliza o slideshow na página */
-    margin-right: 29.5%; /* Ajusta a margem direita conforme necessário */
-        }
-
-        #slideshow img {
-            width: 100%;
-            height: auto;
-            display: none;
-        }
-
-        .slider-indicators {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-        }
-
-        .indicator {
-            width: 10px;
-            height: 10px;
-            background-color: #bbb;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        header video {
-            max-width: 100%;
-            height: auto;
-        }
-
-        nav {
-            background-color: #444;
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap; /* Adicionado para melhorar a quebra de linhas */
-            justify-content: center; /* Adicionado para centralizar os itens na versão mobile */
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            margin: 0 10px;
-        }
-
-        .content {
-            width: 80%;
-            max-width: 1200px;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .columns {
-            display: flex;
-            justify-content: space-between;
-            width: 90%;     /* Nível de distâncias das colunas nas aextremidades da página */
-            box-sizing: border-box;
-        }
-
-        .column {
-            box-sizing: border-box;
-            background-color: #fff;
-            padding: 20px;
-            margin: px; /* Margem padrão da altura da página */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(32, 31, 31, 0.1);
-        }
-
-.column-left {
-    /* Ajuste manual da largura para a coluna da esquerda (altere conforme necessário) */
-    width: calc(100% - 25%);
-}
-
-.column-right {
-    /* Ajuste manual da largura para a coluna da direita (altere conforme necessário) */
-    width: 20%;
-}
-        .button {
-            background-color: rgb(32, 119, 201);
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .button-column {
-            width: 55%; /* Tamanho dos botões do 1º menu da direita */
-            margin: 0 auto; /* Isso centralizará o botão na coluna */
-        }
-
-        /* Estilos para o botão flutuante do WhatsApp */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .whatsapp-button img {
-            width: 60px; /* Ajuste o tamanho conforme necessário */
-            height: auto;
-            border-radius: 50%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-            cursor: pointer;
-        }
-
-        .whatsapp-button img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Estilos para os botões de navegação no rodapé voltar, home, e avançar */
-        .footer-buttons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 20px;
-    margin-right: 20%; /* Ajusta o valor conforme necessário para mover para a direita */
-    margin-bottom: 10px;
-}
-
-.footer-buttons button {
-    background-color: rgb(32, 119, 201);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0 5px;
-}
-
-.script-container {
-    margin-right: 21%; /* Ajuste o valor conforme necessário para mover para a esquerda */
-}
-    </style>
+    <meta property="og:site_name" content="Álan Cruz Tec | Website">
+    <link rel="icon" href="favicon-url" type="image/x-icon"> <!-- Melhor visibilidade SEO -->
+  <title>Álan Cruz Tec | Website</title>
+  <link rel="stylesheet" href="style/main-style.css">
 </head>
 <body>
-    <header>
-        <video autoplay loop muted>
-            <source src="https://github.com/alanmugiwara/alanmugiwara.github.io/raw/main/video/logo.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-        </video>
-    </header>
-
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="assets/webm_4k.webm" type="video/webm">
+    Seu navegador não suporta vídeo em background.
+  </video>
+  <header>
+    <div class="menu-title">AlanCruz.Tec.BR</div>
     <nav>
-        <ul>
-            <li><a href="index">Página Inicial</a></li>
-            <li><a href="pages/mercadometro">Mercadômetro</a></li>
-            <li><a href="pages/calculadora-de-precificacao">Calculadora de precificação</a></li>
-            <li><a href="https://github.com/alanmugiwara?tab=repositories">Repositórios GitHub</a></li>
-            <li><a href="https://www.jumpmanclubbrasil.com.br/">Projeto de Games</a></li>
-            <li><a href="pages/contato">Contato</a></li>
-            <!-- Adicione mais links conforme necessário -->
-        </ul>
+      <a href="#">Início</a>
+      <a href="#">Projetos web</a>
+      <a href="#">Idiomas</a>
     </nav>
-    </div>
-    <div id="slideshow">
-        <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/1.png" alt="Slide 1">
-        <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/2.png" alt="Slide 2">
-        <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/3.png" alt="Slide 3">
-        <div class="slider-indicators">
-            <div class="indicator" onclick="currentSlide(0)"></div>
-            <div class="indicator" onclick="currentSlide(1)"></div>
-            <div class="indicator" onclick="currentSlide(2)"></div>
-        </div>
-    </div>
-    
-    <script>
-        let currentSlideIndex = 0;
-        const slides = document.querySelectorAll('#slideshow img');
-        const totalSlides = slides.length;
-        const indicators = document.querySelectorAll('.indicator');
-    
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.display = i === index ? 'block' : 'none';
-            });
-        }
-    
-        function updateIndicators(index) {
-            indicators.forEach((indicator, i) => {
-                indicator.style.backgroundColor = i === index ? '#555' : '#bbb';
-            });
-        }
-    
-        function nextSlide() {
-            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-            showSlide(currentSlideIndex);
-            updateIndicators(currentSlideIndex);
-        }
-    
-        function currentSlide(index) {
-            currentSlideIndex = index;
-            showSlide(currentSlideIndex);
-            updateIndicators(currentSlideIndex);
-        }
-    
-        function startSlideshow() {
-            setInterval(nextSlide, 3000); // Muda o slide a cada 2 segundos (2000 milissegundos)
-        }
-    
-        // Exibe o primeiro slide, inicia o slideshow e atualiza os indicadores
-        showSlide(currentSlideIndex);
-        startSlideshow();
-        updateIndicators(currentSlideIndex);
-    </script>
-    <div class="columns">
-        <div class="column column-left">
-            <!-- Conteúdo da coluna 1 (esquerda) -->
-
-        </div>
-
-        <div class="column column-right">
-            <!-- Conteúdo da coluna 3 (direita()) -->
-            <h4>Downloads<h4>
-            <button class="button button-column"><a href="link-para-android-apps">Android Apps</a></button><br/>
-            <br><button class="button button-column"><a href="https://alanmugiwara.github.io/">C++ Apps</a></button><br/>
-            <br><button class="button button-column"><a href="https://alanmugiwara.github.io/">Java Apps</a></button><br/>
-            <br><button class="button button-column"><a href="https://alanmugiwara.github.io/pages/kick-game">JavaScript Apps</a></button><br/>
-            <br><button class="button button-column"><a href="https://alanmugiwara.github.io/">Python Apps</a></button><br/>
-                        <h4>Me pague um café</h4>
-            <a href="https://alanmugiwara.github.io/pages/donate">
-                <img src="https://raw.githubusercontent.com/alanmugiwara/alanmugiwara.github.io/main/img/cofee.gif">
-              </a>
-            <br><br/>
-            <h4>Redes sociais</h4>
-        </div>
-    </div>
-
-    <!-- Botão flutuante do WhatsApp -->
-    <div class="whatsapp-button">
-        <a href="https://api.whatsapp.com/send?phone=5571993277032&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20no%20GitHub%20e%20gostaria%20de%20algumas%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20trabalho!" target="_blank" title="Chama no WhatsApp">
-            <img src="https://github.com/alanmugiwara/alanmugiwara.github.io/blob/main/img/whatsapp.png?raw=true" alt="WhatsApp">
-        </a>
-    </div>
-
-    <!-- Botões de navegação no rodapé -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background-color: #f4f4f4;
-            }
-            .custom-button {
-                width: 120px;
-                height: 50px;
-                background-color: rgb(32, 119, 201);
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body><br>
-        <div class="script-container">
-            <script type="text/javascript" src="https://www.usersonline.org/uo-1d02Wx9A2Ya767aZ-6-0.js"></script>
-        </div>
-    <div class="footer-buttons">
-        <button class="button" onclick="window.history.back()">Voltar</button>
-        <button class="button" onclick="window.location.href='https://alanmugiwara.github.io'">Home</button>
-        <button class="button" onclick="window.history.forward()">Avançar</button>
-    </div>
+  </header>
+  <div class="avatar"></div>
+  <main>
+    <section class="meu-nome">
+      <div>
+        <h1>👨🏽‍💻 Álan Cruz</h1>
+        <p>Essa é a minha página de Portifólio digital.<br>
+        Econtre informações sobre a minha formação e projetos.</p>
+    </section>
+    <section class="acesso-rapido">
+      <h2>Acesso rápido</h2>
+      <div class="botoes">
+        <a class="btn" href="#">Sobre mim</a>
+        <a class="btn" href="https://github.com/alanmugiwara?tab=repositories">Portifólio</a>
+        <a class="btn" href="https://drive.google.com/drive/folders/1zLNwurOn4aOVo3QeBf1rsPQTaqHqWl0g">Curriculo</a>
+        <a class="btn" href="https://www.jumpmanclubbrasil.com.br/">Projeto paralelo</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

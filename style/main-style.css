@@ -1,0 +1,125 @@
+body {
+  font-family: "Fira Code", monospace;
+  cursor: url('/assets/cursor-pixel.png') 0 0, auto;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 900px;
+}
+
+.menu-title{
+  color: #6ca0ff;
+  margin-right: 0px;
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-right: 35px;
+}
+
+.meu-nome {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start;
+  margin-right: 750px;
+  margin-bottom: 48px;
+  padding-top: 40px;
+  gap: 48px;
+}
+
+.meu-nome h1 {
+  color: #6ca0ff;
+  font-size: 2.5rem; /* Tamanho grande, mas não exagerado */
+  margin: 0 0 16px 0;
+  font-family: inherit; /* Garante a mesma fonte */
+  font-weight: bold;
+}
+
+
+.avatar {
+  position: fixed;
+  top: 380px;
+  right: 180px;
+  width: 104px;
+  height: 270px;
+  background-image: url('/assets/avatar.png');
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: #e0e6f0;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #6ca0ff;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.acesso-rapido h2 {
+  color: #6ca0ff;
+  font-size: 2rem;
+  padding-top: 100px;
+  margin-bottom: 24px;
+}
+
+.botoes {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.25; 
+  pointer-events: none; /* impede interação com o vídeo */
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid #3be07a;
+  color: #3be07a;
+  background: transparent;
+  border-radius: 12px;
+  padding: 24px 32px;
+  font-size: 1.2rem;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 16px;
+  transition: backgrund 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: #3be07a;
+  box-shadow: 0 8px 32px rgba(59, 224, 122, 0.25), 0 0 8px #3be07a;
+  color: #11141a;
+}
