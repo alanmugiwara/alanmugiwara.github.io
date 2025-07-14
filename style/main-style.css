@@ -1,11 +1,24 @@
+* {
+  cursor: url('/assets/cursor-pixel.png') 0 0, auto !important;
+}
+
+a, button {
+  cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
+}
+
 body {
   font-family: "Fira Code", monospace;
-  cursor: url('/assets/cursor-pixel.png') 0 0, auto;
+  cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
   background-color: #0d1117;
   color: #c9d1d9;
   margin: 0;
   padding: 0;
 }
+
+.cursor-pointer {
+  cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
+}
+
 
 header {
   display: flex;
@@ -44,7 +57,7 @@ header {
 
 
 .avatar {
-  position: fixed;
+  position: absolute;
   top: 380px;
   right: 180px;
   width: 104px;
@@ -122,4 +135,22 @@ main {
   background: #3be07a;
   box-shadow: 0 8px 32px rgba(59, 224, 122, 0.25), 0 0 8px #3be07a;
   color: #11141a;
+}
+
+.social-icons {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+  margin-bottom: 16px;
+  padding-top: 20px;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
 }
