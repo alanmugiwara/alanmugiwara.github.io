@@ -131,7 +131,6 @@ main {
   font-family: inherit;
   text-decoration: none;
   font-weight: bold;
-  margin-bottom: 16px;
   transition: backgrund 0.2s, color 0.2s;
 }
 
