@@ -15,7 +15,6 @@ a, button {
   cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
 }
 
-
 header {
   display: flex;
   flex-direction: column;
@@ -149,8 +148,8 @@ main {
 }
 
 .social-icons img {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   transition: transform 0.2s;
   margin-bottom: 16px;
   padding-top: 20px;
@@ -196,7 +195,7 @@ main {
   }
 
   .meu-nome .emoji {
-    font-size: 3.5rem;
+    font-size: 3.9rem;
     text-align: center;
   }
 
