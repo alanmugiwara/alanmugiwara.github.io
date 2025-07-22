@@ -964,6 +964,8 @@ height: 2.5vmin;
     background: #3be07a;
     box-shadow: 0 8px 32px rgba(59, 224, 122, 0.25), 0 0 8px #3be07a;
     color: #11141a;
+    transform: scale(1.2); /* zoom */
+    transition: transform 0.2s; /* suaviza o zoom */
   }
 
 .meow h1 {
@@ -1012,4 +1014,3 @@ height: 2.5vmin;
         max-width: 300px;
       }
  }
-
