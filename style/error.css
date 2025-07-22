@@ -931,18 +931,18 @@ height: 2.5vmin;
 }
 
 #bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    object-fit: cover;
-    opacity: 0.800; 
-    pointer-events: none; /* impede interação com o vídeo */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.78; 
+  pointer-events: none; /* impede interação com o vídeo */
+}
 
   .btn {
     display: inline-block;
