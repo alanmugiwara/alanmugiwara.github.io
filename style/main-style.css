@@ -278,6 +278,13 @@ main {
     max-width: 300px;
   }
 
+  .btn-acesso-rapido:hover {
+    background: #3be07a;
+    color: #11141a;
+    transform: scale(1.08); /* zoom */
+    transition: transform 0.2s; /* suaviza o zoom */
+  }
+
   .social-icons {
     justify-content: center;
     gap: 16px;
@@ -295,16 +302,13 @@ main {
   }
 
   .menu-nav {
-    color: #c9d1d9;
-    line-height: .6;
-    margin-bottom: 32px;
+    line-height: 3.6;
+    margin-top: 10%;
     max-width: 768px;
     margin: 0 auto 32px auto;
-    padding: 0 24px;
     text-align: left;
     gap: 16px;
     flex-direction: row;
-    
   }
 
   .rodape {
