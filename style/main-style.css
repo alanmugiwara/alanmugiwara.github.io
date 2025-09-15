@@ -1,6 +1,9 @@
+
+* {
+  cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
+}
 body {
   font-family: "Fira Code", monospace;
-  cursor: url('/assets/cursor-pixel.png') 0 0, pointer !important;
   background-color: #0d1117;
   color: #c9d1d9;
   margin: 0;
@@ -22,17 +25,6 @@ header {
   margin-right: 900px;
 }
 
-.menu-title{
-  max-width: 1200px;
-  color: #6ca0ff;
-  margin: 0 auto 32px auto;
-  padding: 0 24px;
-  padding-top: 30px;
-  padding-right: 35px;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 .menu-nav {
   color: #c9d1d9;
   line-height: .6;
@@ -40,8 +32,14 @@ header {
   max-width: 1200px;
   margin: 0 auto 32px auto;
   padding: 0 24px;
+  padding-top: 5%;
+  padding-right: 3%;
   text-align: left;
   gap: 16px;
+  max-width: 1200px;
+  color: #6ca0ff;
+  margin: 0 auto 32px auto;
+  font-weight: bold;
 }
 
 .menu-nav a {
@@ -74,7 +72,7 @@ header {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 32px;
-  max-width: 600px;
+  max-width: 670px;
 }
 
 .avatar {
@@ -187,8 +185,6 @@ main {
   text-align: left;
   margin-top: -10px;
 }
-
-
 
 /* Media Queries Mobile */
 @media (max-width: 768px) {
